@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "4e3b77e5-ac0d-4569-858a-fed6f541eccf",
+		"name": "Clevertec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32173052"
+	},
+	"item": [
+		{
+			"name": "data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/news_applications/v1/news?pageSize=50",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"news_applications",
+						"v1",
+						"news"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data sort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}/news_applications/v1/news?pageNo=0&pageSize=5&sortBy=id",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"news_applications",
+						"v1",
+						"news"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "sortBy",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data",
+			"protocolProfileBehavior": {
+				"maxRedirects": 200
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"title\": \"Погода 09.01.2023\",\r\n        \"text\": \"Скрипучие морозы, которые пришли в Беларусь в канун Рождества и оставались с нами в эти праздничные дни, судя по данным синоптиков, умерят пыл. В республике установится снежная и ветреная погода. Столбики термометров днем вновь покажут небольшой плюс. \",\r\n        \"userName\": \"Орлюта Алёна Валерьевна\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/news_applications/v1/news",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"news_applications",
+						"v1",
+						"news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data id 170",
+			"protocolProfileBehavior": {
+				"maxRedirects": 100
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}/news_applications/v1/news?pageNo=50&pageSize=1",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"news_applications",
+						"v1",
+						"news"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "50"
+						},
+						{
+							"key": "pageSize",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
